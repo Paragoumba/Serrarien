@@ -15,7 +15,7 @@ private:
     double lastResizeTime;
 
 public:
-    Window(const char* title, int _width, int height);
+    explicit Window(const char* title, int _width = -1, int height = -1);
 
     void setTitle(const char* newTitle);
     bool shouldClose();
