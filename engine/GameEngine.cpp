@@ -4,7 +4,7 @@
 
 #define FPS 60
 
-GameEngine::GameEngine() : window(Window("Serrarien", 800, 600)), game(){
+GameEngine::GameEngine() : window(Window("Serrarien")), game(){
 
     window.setCursor("../res/images/cursor_dirt.png");
     window.setIcon("../res/images/blocks/dirt.png");

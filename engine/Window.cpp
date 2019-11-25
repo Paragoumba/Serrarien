@@ -5,17 +5,37 @@
 #include "exceptions/InitException.hpp"
 #include "Transformation.hpp"
 
-Window::Window(const char* _title, int _width, int _height) : title(_title), width(_width), height(_height),
-cursor(nullptr){
+Window::Window(const char* _title, int _width, int _height) : title(_title), cursor(nullptr){
 
     glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwSwapInterval(-1);
 
-    handle = glfwCreateWindow(width, height, title, nullptr, nullptr);
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+
+    int fullscreen = false;
+
+    if (_width == -1 || _height == -1){
+
+        if (_width == -1 && _height == -1){
+
+            fullscreen = true;
+
+        }
+
+        glfwGetMonitorWorkarea(monitor, nullptr, nullptr,
+                _width == -1 ? &_width : nullptr,
+                _height == -1 ? &_height : nullptr);
+
+    }
+
+    width = _width;
+    height = _height;
+
+    handle = glfwCreateWindow(width, height, title, fullscreen ? monitor : nullptr, nullptr);
 
     if (handle == nullptr){
 
