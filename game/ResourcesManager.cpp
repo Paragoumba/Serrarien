@@ -83,9 +83,9 @@ void ResourcesManager::init(){
 
 }
 
-MaterialPtr& ResourcesManager::getMaterial(GameItem* object){
+MaterialPtr& ResourcesManager::getMaterial(GameItem* gameItem){
 
-    return materials[object->getIdentifier()];
+    return materials[gameItem->getIdentifier()];
 
 }
 

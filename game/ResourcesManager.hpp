@@ -20,7 +20,7 @@ public:
 
     static void init();
     static MeshPtr& getMesh(GameItem* gameItem);
-    static MaterialPtr& getMaterial(GameItem* object);
+    static MaterialPtr& getMaterial(GameItem* gameItem);
     static Texture* getFontTexture();
 };
 
