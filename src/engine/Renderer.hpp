@@ -4,7 +4,7 @@
 #include "Shader.hpp"
 #include "Camera.hpp"
 #include "Window.hpp"
-#include "../engine/HUD.hpp"
+#include "HUD.hpp"
 #include "Scene.hpp"
 
 class Renderer {

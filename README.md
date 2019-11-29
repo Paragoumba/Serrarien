@@ -1,4 +1,4 @@
-<img src="res/banner-480x270.png" alt="banner">
+<img src="src/res/banner-480x270.png" alt="banner">
 
 # Serrarien
 Serrarien is a 2D survival game inspired by Terraria. It is open-source

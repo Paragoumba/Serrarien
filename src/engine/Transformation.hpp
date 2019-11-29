@@ -4,7 +4,7 @@
 #include <glm/mat4x4.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-#include "../engine/objects/gameItems/GameItem.hpp"
+#include "objects/gameItems/GameItem.hpp"
 #include "Camera.hpp"
 
 class Transformation {

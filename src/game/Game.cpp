@@ -112,24 +112,28 @@ void Game::input(Window& window){
     if (window.getKey(GLFW_KEY_W) == GLFW_PRESS){
 
         camera.translate(0, 1);
+        player->translate(0, 1);
 
     }
 
     if (window.getKey(GLFW_KEY_A) == GLFW_PRESS){
 
         camera.translate(-1, 0);
+        player->translate(-1, 0);
 
     }
 
     if (window.getKey(GLFW_KEY_S) == GLFW_PRESS){
 
         camera.translate(0, -1);
+        player->translate(0, -1);
 
     }
 
     if (window.getKey(GLFW_KEY_D) == GLFW_PRESS){
 
         camera.translate(1, 0);
+        player->translate(1, 0);
 
     }
 
@@ -159,10 +163,10 @@ void Game::update(Window& window){
 
     window.getFramebufferSize(&winWidth, &winHeight);
 
-    float centerX = (float) winWidth / 2 - 8;
+    /*float centerX = (float) winWidth / 2 - 8;
     float centerY = (float) winHeight / 2 - 16;
 
-    player->setPosition(centerX + std::cos(glm::radians(alpha)) * 200, centerY + std::sin(glm::radians(alpha)) * 200);
+    player->setPosition(centerX + std::cos(glm::radians(alpha)) * 200, centerY + std::sin(glm::radians(alpha)) * 200);*/
 
     if (textBool){
 

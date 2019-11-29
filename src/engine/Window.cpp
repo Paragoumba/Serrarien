@@ -35,7 +35,9 @@ Window::Window(const char* _title, int _width, int _height) : title(_title), cur
     width = _width;
     height = _height;
 
-    handle = glfwCreateWindow(width, height, title, fullscreen ? monitor : nullptr, nullptr);
+    handle = glfwCreateWindow(
+            width, height,
+            title, fullscreen ? monitor : nullptr, nullptr);
 
     if (handle == nullptr){
 
@@ -86,6 +88,15 @@ Window::Window(const char* _title, int _width, int _height) : title(_title), cur
                 1.0f);
 
     });
+
+    /*glfwSetMouseButtonCallback(handle, [](GLFWwindow* window, int button, int action, int mods){
+        if(button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS){
+            double xpos, ypos;
+            //getting cursor position
+            glfwGetCursorPos(window, &xpos, &ypos);
+            std::cout << "Cursor Position at (" << xpos << " : " << ypos << ')' << std::endl;
+        }
+    });*/
 
     glClearColor(0.4f, 0.3f, 0.5f, 1.0f);
 

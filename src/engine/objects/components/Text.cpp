@@ -54,13 +54,13 @@ void Text::setText(const char* _text){
         vertices[letterVerticesNumber * 2 + 7] = (float) charHeight;
 
         texCoords[letterVerticesNumber * 2]     = (float) (letterPosition % colNumber * charWidth) / (float) fontBitmapWidth;
-        texCoords[letterVerticesNumber * 2 + 1] = 1 - (float) ((letterPosition / colNumber + 1) * charHeight) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
+        texCoords[letterVerticesNumber * 2 + 1] = (float) (1 - ((letterPosition / colNumber + 1) * charHeight)) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
         texCoords[letterVerticesNumber * 2 + 2] = (float) ((letterPosition % colNumber + 1) * charWidth) / (float) fontBitmapWidth;
-        texCoords[letterVerticesNumber * 2 + 3] = 1 - (float) ((letterPosition / colNumber + 1) * charHeight) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
+        texCoords[letterVerticesNumber * 2 + 3] = (float) (1 - ((letterPosition / colNumber + 1) * charHeight)) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
         texCoords[letterVerticesNumber * 2 + 4] = (float) (letterPosition % colNumber * charWidth) / (float) fontBitmapWidth;
-        texCoords[letterVerticesNumber * 2 + 5] = 1 - (float) (letterPosition / colNumber * charHeight) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
+        texCoords[letterVerticesNumber * 2 + 5] = (float) (1 - (letterPosition / colNumber * charHeight)) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
         texCoords[letterVerticesNumber * 2 + 6] = (float) ((letterPosition % colNumber + 1) * charWidth) / (float) fontBitmapWidth;
-        texCoords[letterVerticesNumber * 2 + 7] = 1 - (float) (letterPosition / colNumber * charHeight) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
+        texCoords[letterVerticesNumber * 2 + 7] = (float) (1 - (letterPosition / colNumber * charHeight)) / (float) fontBitmapHeight; // NOLINT(bugprone-integer-division)
 
         indices[i * 6]     =     letterVerticesNumber;
         indices[i * 6 + 1] = 1 + letterVerticesNumber;
