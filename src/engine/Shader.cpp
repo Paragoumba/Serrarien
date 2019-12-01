@@ -76,27 +76,27 @@ void Shader::use(){
 
 }
 
-void Shader::setBool(const std::string &name, bool value) const {
+void Shader::setBool(const char* name, bool value) const {
 
-    glUniform1i(glGetUniformLocation(id, name.c_str()), (int) value);
-
-}
-
-void Shader::setInt(const std::string &name, int value) const {
-
-    glUniform1i(glGetUniformLocation(id, name.c_str()), value);
+    glUniform1i(glGetUniformLocation(id, name), (int) value);
 
 }
 
-void Shader::setFloat(const std::string &name, float value) const {
+void Shader::setInt(const char* name, int value) const {
 
-    glUniform1f(glGetUniformLocation(id, name.c_str()), value);
+    glUniform1i(glGetUniformLocation(id, name), value);
 
 }
 
-void Shader::setMat4f(const std::string &name, glm::mat4 value) const {
+void Shader::setFloat(const char* name, float value) const {
 
-    glUniformMatrix4fv(glGetUniformLocation(id, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
+    glUniform1f(glGetUniformLocation(id, name), value);
+
+}
+
+void Shader::setMat4f(const char* name, glm::mat4 value) const {
+
+    glUniformMatrix4fv(glGetUniformLocation(id, name), 1, GL_FALSE, glm::value_ptr(value));
 
 }
 
