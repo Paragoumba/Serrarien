@@ -52,9 +52,6 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath){
     glLinkProgram(id);
     checkCompileErrors(id, "PROGRAM");
 
-    setInt("texture1", 0);
-    setInt("texture2", 1);
-
     glDeleteShader(vertex);
     glDeleteShader(fragment);
 
