@@ -1,5 +1,5 @@
-#ifndef SHADER_HPP
-#define SHADER_HPP
+#ifndef SERRARIEN_SHADER_HPP
+#define SERRARIEN_SHADER_HPP
 
 #include <string>
 #include <fstream>
