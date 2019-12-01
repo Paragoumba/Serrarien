@@ -27,7 +27,7 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath){
 
     } catch (std::ifstream::failure& e){
 
-        std::cout << "ERROR::SHADER::FILE_NOT_SUCCESSFULLY_READ" << std::endl;
+        std::cout << "ERROR: Cannot read file." << std::endl;
 
     }
 
@@ -102,7 +102,7 @@ void Shader::checkCompileErrors(unsigned int shader, const std::string& type){
         if (!success){
 
             glGetShaderInfoLog(shader, 1024, nullptr, infoLog);
-            std::cout << "ERROR::SHADER_COMPILATION_ERROR of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+            std::cout << "ERROR: Cannot compile shader (" << type << ") for the following reason:\n" << infoLog << std::endl;
 
         }
 
@@ -113,7 +113,7 @@ void Shader::checkCompileErrors(unsigned int shader, const std::string& type){
         if (!success){
 
             glGetProgramInfoLog(shader, 1024, nullptr, infoLog);
-            std::cout << "ERROR::PROGRAM_LINKING_ERROR of type: " << type << "\n" << infoLog << "\n -- --------------------------------------------------- -- " << std::endl;
+            std::cout << "ERROR: Cannot link shader (" << type << ") for the following reason:\n" << infoLog << std::endl;
 
         }
     }
