@@ -5,7 +5,7 @@
 
 #include "../engine/Mesh.hpp"
 #include "../engine/objects/gameItems/GameItem.hpp"
-#include "../engine/objects/gameItems/Variant.hpp"
+#include "objects/gameItems/Variant.hpp"
 
 class ResourcesManager {
 private:

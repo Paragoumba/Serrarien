@@ -3,7 +3,7 @@
 
 #include <map>
 
-#include "GameItem.hpp"
+#include "../../../engine/objects/gameItems/GameItem.hpp"
 #include "Variant.hpp"
 
 enum BlockType {

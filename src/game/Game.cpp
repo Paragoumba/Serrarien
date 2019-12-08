@@ -1,8 +1,5 @@
 #include "Game.hpp"
-#include "ResourcesManager.hpp"
-#include "../engine/objects/gameItems/Block.hpp"
-#include "../engine/objects/components/Text.hpp"
-#include "../engine/objects/gameItems/Disc.hpp"
+#include "objects/gameItems/Block.hpp"
 
 /**
  *

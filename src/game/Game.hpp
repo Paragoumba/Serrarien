@@ -6,7 +6,7 @@
 #include "../engine/objects/gameItems/GameItem.hpp"
 #include "../engine/Renderer.hpp"
 #include "../engine/Window.hpp"
-#include "../engine/objects/gameItems/Player.hpp"
+#include "objects/gameItems/Player.hpp"
 #include "../engine/objects/components/Text.hpp"
 #include "../engine/Scene.hpp"
 

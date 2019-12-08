@@ -1,7 +1,7 @@
 #ifndef SERRARIEN_PLAYER_HPP
 #define SERRARIEN_PLAYER_HPP
 
-#include "GameItem.hpp"
+#include "../../../engine/objects/gameItems/GameItem.hpp"
 
 class Player : public GameItem {
 private:

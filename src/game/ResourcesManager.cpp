@@ -1,5 +1,5 @@
 #include "ResourcesManager.hpp"
-#include "../engine/objects/gameItems/Block.hpp"
+#include "objects/gameItems/Block.hpp"
 
 std::map<GameItemType, MeshPtr> ResourcesManager::meshes;
 std::map<GameItemIdentifier, MaterialPtr> ResourcesManager::materials;
